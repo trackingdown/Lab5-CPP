@@ -12,9 +12,19 @@ using namespace std;
 
 string drawTri(int lines)
 {
+	//string pyramid;
+	int space = 0;
+	int asterix = 0;
+
 	for (int i = 0; i < lines; i++)
 	{
-		
+		//pyramid = lines - i;
+		for (int i= 0;i < lines; i++)
+		{
+			cout << " ";
+		}
+
+
 	}
 
 }
@@ -33,15 +43,23 @@ string drawTriR180(int lines)
 
 int main()
 {
-	cout << "Enter the size of your triangle (interger in [1, 20]) \nType Q to quit the program:" << endl;
 	//n is used to the formula 2*n-1 to caluclate triangle size
 	int n;
-	cin >> n;
+	while (n != "q" && n != "Q" && n <= 1 && n >= 20);
+	{
+		cout << "Enter the size of your triangle (interger in [1, 20]) \nType Q to quit the program:" << endl;
+		
 
-	cout << "The triangle with size " << n << " is: \n" << drawTri(n) << endl;
+		cin >> n;
+
+		cout << "The triangle with size " << n << " is: \n" << drawTri(n) << endl;
+
+		cout << "The rotation for 90 degrees clockwise: \n" << drawTriR90(n) << endl;
+
+		cout << "The rotation for 180 degress clockwise: \n" << drawTriR180(n) << endl;
 
 
-
+	}
 	system("pause");
 	return 0;
 }
