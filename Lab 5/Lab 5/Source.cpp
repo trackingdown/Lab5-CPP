@@ -83,8 +83,8 @@ string drawTriR180(int lines)
 int main()
 {
 	int input;
-	//while (input != "q" && input != "Q" && input <= 1 && input >= 20);
-	//{
+	while (input != "q" && input != "Q" && input <= 1 && input >= 20);
+	{
 		cout << "Enter the size of your triangle (interger in [1, 20]) \nType Q to quit the program:" << endl;
 		
 
@@ -97,7 +97,7 @@ int main()
 		cout << "The rotation for 180 degress clockwise: \n" << drawTriR180(input) << endl;
 		
 
-	//}
+	}
 	system("pause");
 	return 0;
 }
